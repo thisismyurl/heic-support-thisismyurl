@@ -121,7 +121,7 @@ class TIMU_HEIC_Support extends TIMU_Core_v1 {
 
         $imagick_active = extension_loaded( 'imagick' );
         $current_val    = $this->get_plugin_option( 'enabled', 1 ); 
-        $sidebar_extra  = '<p>' . esc_html__( 'HEIC conversion requires the Imagick PHP extension to be active on your server.', 'thisismyurl-heic-support' ) . '</p>';
+        $sidebar_extra  = '';
         ?>
         <div class="wrap timu-admin-wrap">
             <?php $this->render_core_header(); ?>
