@@ -49,7 +49,7 @@ class TIMU_HEIC_Support extends TIMU_Core_v1 {
 	 */
 	public function __construct() {
 		parent::__construct(
-			'thisismyurl-heic-support',      // Unique plugin slug.
+			'heic-support-thisismyurl',      // Unique plugin slug.
 			plugin_dir_url( __FILE__ ),       // Base URL for plugin assets.
 			'timu_hs_settings_group',         // Settings API group name.
 			'',                               // Custom icon URL (optional).
@@ -111,49 +111,49 @@ class TIMU_HEIC_Support extends TIMU_Core_v1 {
 		 * Build radio options dynamically based on the presence of sibling plugins.
 		 */
 		$format_options = array(
-			'none' => __( 'Upload as .heic files.', 'thisismyurl-heic-support' ),
+			'none' => __( 'Upload as .heic files.', 'heic-support-thisismyurl' ),
 		);
 
 		if ( $webp_active ) {
-			$format_options['webp'] = __( 'Convert to .webp file format.', 'thisismyurl-heic-support' );
+			$format_options['webp'] = __( 'Convert to .webp file format.', 'heic-support-thisismyurl' );
 		}
 
 		if ( $avif_active ) {
-			$format_options['avif'] = __( 'Convert to .avif file format.', 'thisismyurl-heic-support' );
+			$format_options['avif'] = __( 'Convert to .avif file format.', 'heic-support-thisismyurl' );
 		}
 
 		$blueprint = array(
 			'config' => array(
-				'title'  => __( 'HEIC Configuration', 'thisismyurl-heic-support' ),
+				'title'  => __( 'HEIC Configuration', 'heic-support-thisismyurl' ),
 				'fields' => array(
 					'enabled'       => array(
 						'type'      => 'switch',
-						'label'     => __( 'Enable HEIC Uploads', 'thisismyurl-heic-support' ),
-						'desc'      => __( 'Allows .heic files in the Media Library.', 'thisismyurl-heic-support' ),
+						'label'     => __( 'Enable HEIC Uploads', 'heic-support-thisismyurl' ),
+						'desc'      => __( 'Allows .heic files in the Media Library.', 'heic-support-thisismyurl' ),
 						'is_parent' => true,
 						'default'   => 1,
 					),
 					'target_format' => array(
 						'type'      => 'radio',
-						'label'     => __( 'Conversion Format', 'thisismyurl-heic-support' ),
+						'label'     => __( 'Conversion Format', 'heic-support-thisismyurl' ),
 						'parent'    => 'enabled',
 						'is_parent' => true,
 						'options'   => $format_options,
 						'default'   => $webp_active ? 'webp' : 'none',
 						'desc'      => ( ! $webp_active || ! $avif_active )
-									? __( 'Install <a href="https://thisismyurl.com/thisismyurl-webp-support/">WebP</a> or <a href="https://thisismyurl.com/thisismyurl-avif-support/">AVIF</a> plugins for more options.', 'thisismyurl-heic-support' )
-									: __( 'Choose how to process HEIC files upon upload.', 'thisismyurl-heic-support' ),
+									? __( 'Install <a href="https://thisismyurl.com/thisismyurl-webp-support/">WebP</a> or <a href="https://thisismyurl.com/thisismyurl-avif-support/">AVIF</a> plugins for more options.', 'heic-support-thisismyurl' )
+									: __( 'Choose how to process HEIC files upon upload.', 'heic-support-thisismyurl' ),
 					),
 					'webp_quality'  => array(
 						'type'         => 'number',
-						'label'        => __( 'WebP Quality', 'thisismyurl-heic-support' ),
+						'label'        => __( 'WebP Quality', 'heic-support-thisismyurl' ),
 						'parent'       => 'target_format',
 						'parent_value' => 'webp',
 						'default'      => 80,
 					),
 					'avif_quality'  => array(
 						'type'         => 'number',
-						'label'        => __( 'AVIF Quality', 'thisismyurl-heic-support' ),
+						'label'        => __( 'AVIF Quality', 'heic-support-thisismyurl' ),
 						'parent'       => 'target_format',
 						'parent_value' => 'avif',
 						'default'      => 60,
@@ -175,8 +175,8 @@ class TIMU_HEIC_Support extends TIMU_Core_v1 {
 	 */
 	public function add_admin_menu() {
 		add_management_page(
-			__( 'HEIC Support Settings', 'thisismyurl-heic-support' ),
-			__( 'HEIC Support', 'thisismyurl-heic-support' ),
+			__( 'HEIC Support Settings', 'heic-support-thisismyurl' ),
+			__( 'HEIC Support', 'heic-support-thisismyurl' ),
 			'manage_options',
 			$this->plugin_slug,
 			array( $this, 'render_settings_page' )
