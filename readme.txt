@@ -8,7 +8,7 @@ Support Link: https://thisismyurl.com/contact/
 Tags: heic, heif, optimization, ios images, webp, apple images 
 Requires at least: 6.0 
 Tested up to: 6.9 
-Stable tag: 1.260102
+Stable tag: 1.26010212
 License: GPLv2 or later 
 License URI: https://www.gnu.org/licenses/gpl-2.0.html 
 GitHub Plugin URI: https://github.com/thisismyurl/thisismyurl-heic-support/ 
@@ -65,6 +65,18 @@ Navigate to Media > HEIC Support to access the dashboard.
 = Does this support HEIF formats? = Yes! The conversion engine handles both .heic and .heif files from modern smartphones.
 
 == Changelog ==
+
+= 1.26010212 =
+* TIMU_Core updated to version 1.26010212
+
+= 1.26010212 =
+* TIMU_Core updated to version 1.26010212
+
+= 1.26010212 =
+* TIMU_Core updated to version 1.26010212
+
+= 1.26010212 =
+* TIMU_Core updated to version 1.26010212
 n
 = 1.260102 =
 * Updated core library to version 1.260102
