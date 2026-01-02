@@ -60,6 +60,13 @@ class TIMU_HEIC_Support extends TIMU_Core_v1 {
 
         // Hook to set defaults upon activation
         register_activation_hook( __FILE__, array( $this, 'activate_plugin_defaults' ) );
+
+
+        add_action( 'init', array( $this, 'setup_plugin' ) );
+
+
+
+
     }
 
     /**
@@ -73,6 +80,8 @@ class TIMU_HEIC_Support extends TIMU_Core_v1 {
         }
     }
 
+
+
     /**
      * Filters allowed mime types to include HEIC/HEIF if enabled.
      */
@@ -83,6 +92,27 @@ class TIMU_HEIC_Support extends TIMU_Core_v1 {
         }
         return $mimes;
     }
+
+    public function setup_plugin() {
+        // Defining the blueprint here prevents the "Doing it Wrong" translation notice
+        $blueprint = array(
+            'config' => array(
+                'title'  => __( 'HEIC Configuration', 'thisismyurl-heic-support' ),
+                'fields' => array(
+                    'enabled' => array(
+                        'type'  => 'switch',
+                        'label' => __( 'Enable HEIC Conversion', 'thisismyurl-heic-support' ),
+                        'desc'  => __( 'Automatically process images upon upload.', 'thisismyurl-heic-support' ),
+                        'default' => 1
+                    ),
+                )
+            )
+        );
+
+        $this->init_settings_generator( $blueprint );
+    }
+
+
 
     /**
      * Register the Tools submenu page.
