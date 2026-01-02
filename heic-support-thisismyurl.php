@@ -162,7 +162,10 @@ class TIMU_HEIC_Support extends TIMU_Core_v1 {
 									: __( 'Choose how to process HEIC files upon upload.', 'heic-support-thisismyurl' ),
 					),
 					'heic_quality'  => array(
-						'type'         => 'number',
+						'type'    => 'range', // Now a slider!
+						'default' => 80,
+						'min'     => 10,
+						'max'     => 100,
 						'label'        => __( 'HEIC Quality', 'svg-support-thisismyurl' ),
 						'default'      => 80,
 						'show_if' => array(
@@ -171,18 +174,22 @@ class TIMU_HEIC_Support extends TIMU_Core_v1 {
 						)
 					),
 					'webp_quality'  => array(
-						'type'         => 'number',
+						'type'    => 'range', // Now a slider!
+						'default' => 80,
+						'min'     => 10,
+						'max'     => 100,
 						'label'        => __( 'WebP Quality', 'svg-support-thisismyurl' ),
-						'default'      => 80,
 						'show_if' => array(
 							'field' => 'target_format', // Must match the ID of your radio buttons
 							'value' => 'webp'           // Must match the value 'webp' in the radio option
 						)
 					),
 					'avif_quality'  => array(
-						'type'         => 'number',
+						'type'    => 'range', // Now a slider!
+						'default' => 80,
+						'min'     => 10,
+						'max'     => 100,
 						'label'        => __( 'AVIF Quality', 'svg-support-thisismyurl' ),
-						'default'      => 60,
 						'show_if' => array(
 							'field' => 'target_format', // Must match the ID of your radio buttons
 							'value' => 'avif'           // Must match the value 'webp' in the radio option
