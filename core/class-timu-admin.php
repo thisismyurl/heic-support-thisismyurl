@@ -397,11 +397,9 @@ public function add_media_sidebar_actions( $form_fields, $post ) {
         <?php
     }
 
-    public function render_registration_field() {
-    // This triggers the API check and populates the license_message property
-    $this->core->is_licensed();
-    
-    $key = $this->core->get_plugin_option( 'registration_key', '' );
+   public function render_registration_field() {
+    $this->core->is_licensed(); //
+    $key = $this->core->get_plugin_option( 'registration_key', '' ); //
     ?>
     <div class="timu-card">
         <div class="timu-card-header"><?php esc_html_e( 'Registration', 'timu' ); ?></div>
@@ -410,8 +408,12 @@ public function add_media_sidebar_actions( $form_fields, $post ) {
                 <tr>
                     <th scope="row"><?php esc_html_e( 'Key', 'timu' ); ?></th>
                     <td>
-                        <input type="text" name="<?php echo esc_attr( $this->core->plugin_slug ); ?>_options[registration_key]" value="<?php echo esc_attr( $key ); ?>" class="regular-text">
-                        <p class="description">Status: <strong><?php echo esc_html( $this->core->license_message ); ?></strong></p>
+                        <div style="display:flex; gap:10px; align-items:center;">
+                            <input type="text" id="timu_reg_key" name="<?php echo esc_attr( $this->core->plugin_slug ); ?>_options[registration_key]" value="<?php echo esc_attr( $key ); ?>" class="regular-text">
+                            <button type="button" id="timu-ajax-verify-key" class="button button-secondary"><?php esc_html_e( 'Verify Key', 'timu' ); ?></button>
+                            <span class="spinner" style="float:none; margin:0;"></span>
+                        </div>
+                        <div id="timu-license-status-display"><?php echo esc_html( $this->core->license_message ); ?></div>
                     </td>
                 </tr>
             </table>
@@ -419,7 +421,6 @@ public function add_media_sidebar_actions( $form_fields, $post ) {
     </div>
     <?php
 }
-
     /**
  * 6. SIDEBAR BULK ACTIONS
  * * Modified to prevent duplication by verifying the current page slug.

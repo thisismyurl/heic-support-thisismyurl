@@ -8,7 +8,7 @@ Support Link: https://thisismyurl.com/contact/
 Tags: heic, heif, optimization, ios images, webp, apple images 
 Requires at least: 6.0 
 Tested up to: 6.9 
-Stable tag: 1.26010212
+Stable tag: 1.26010214
 License: GPLv2 or later 
 License URI: https://www.gnu.org/licenses/gpl-2.0.html 
 GitHub Plugin URI: https://github.com/thisismyurl/thisismyurl-heic-support/ 
@@ -65,6 +65,111 @@ Navigate to Media > HEIC Support to access the dashboard.
 = Does this support HEIF formats? = Yes! The conversion engine handles both .heic and .heif files from modern smartphones.
 
 == Changelog ==
+
+= 1.26010214 =
+* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
+
+= 1.26010214 =
+* Core hierarchy updated via heic-support-thisismyurl\core
+
+= 1.26010214 =
+* Core hierarchy updated via core\class-timu-core.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
+
+= 1.26010213 =
+* Core hierarchy updated via core\class-timu-core.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core
+
+= 1.26010213 =
+* Core hierarchy updated via core\assets\shared-admin.js
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core
+
+= 1.26010213 =
+* Core hierarchy updated via core\class-timu-admin.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
+
+= 1.26010213 =
+* Core hierarchy updated via core\class-timu-admin.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
+
+= 1.26010213 =
+* Core hierarchy updated via core\class-timu-core.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core
+
+= 1.26010213 =
+* Core hierarchy updated via core\class-timu-core.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core
+
+= 1.26010213 =
+* Core hierarchy updated via core\class-timu-core.php
+
+= 1.26010213 =
+* Core hierarchy updated via core\class-timu-core.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core
+
+= 1.26010213 =
+* Core hierarchy updated via core\class-timu-admin.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
+
+= 1.26010213 =
+* Core hierarchy updated via core\class-timu-admin.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core\2682333820516292531891922458163187249407.ico
+
+= 1.26010213 =
+* Core hierarchy updated via core\class-timu-core.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core
+
+= 1.26010213 =
+* Core hierarchy updated via core\class-timu-core.php
+
+= 1.26010213 =
+* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
+
+= 1.26010213 =
+* Core hierarchy updated via core\class-timu-ajax.php
+
+= 1.26010213 =
+* Core hierarchy updated via Initial Launch
+
+= 1.26010213 =
+* Core hierarchy updated via Initial Script Launch
 
 = 1.26010212 =
 * TIMU_Core updated to version 1.26010212

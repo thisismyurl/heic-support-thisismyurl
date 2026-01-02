@@ -9,7 +9,7 @@
  * Description:         Safely enable HEIC uploads and convert existing images to AVIF format.
  * Tags:                heic, uploads, media library, optimization
  * 
- * Version:             1.26010212
+ * Version:             1.26010214
  * Requires at least:   5.3
  * Requires PHP:        7.4
  * 

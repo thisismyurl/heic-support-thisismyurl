@@ -230,7 +230,8 @@ if ( ! class_exists( 'TIMU_Core_v1' ) ) {
 
             wp_localize_script( 'timu-core-ui', 'timu_core_vars', array(
                 'ajax_url' => admin_url( 'admin-ajax.php' ),
-                'nonce'    => wp_create_nonce( 'timu_install_nonce' )
+                'nonce'    => wp_create_nonce( 'timu_install_nonce' ),
+                'slug'     => $this->plugin_slug
             ) );
         }
 
@@ -283,49 +284,48 @@ if ( ! class_exists( 'TIMU_Core_v1' ) ) {
          * Checks if the plugin is currently licensed and registered for this site.
          * * @return bool True if a valid license is detected.
          */
-      
+        public function is_licensed() {
+            $key = $this->get_plugin_option( 'registration_key', '' );
+            
+            // Ensure the cache key is unique to the specific plugin (e.g., webp-support-thisismyurl_license_status)
+            $cache_key = $this->plugin_slug . '_license_status';
+            $cached_status = get_transient( $cache_key );
 
-public function is_licensed() {
-    $key = $this->get_plugin_option( 'registration_key', '' );
+            if ( 'active' === $cached_status ) {
+                $this->license_message = __( 'Active', 'timu' );
+                return true;
+            }
 
-    if ( empty( $key ) ) {
-        $this->license_message = __( 'Unregistered', 'timu' );
-        return false;
-    }
+            $api_url = add_query_arg( array(
+                'url'  => get_site_url(),
+                'item' => $this->plugin_slug, // This ensures WebP sends its own slug
+                'key'  => $key
+            ), 'https://thisismyurl.com/wp-json/license-manager/v1/check/' );
 
-    $cache_key = $this->plugin_slug . '_license_status';
-    $cached_status = get_transient( $cache_key );
+            $response = wp_remote_get( $api_url, array( 'timeout' => 15 ) );
 
-    if ( 'active' === $cached_status ) {
-        $this->license_message = __( 'Active', 'timu' );
-        return true;
-    }
+            if ( is_wp_error( $response ) ) {
+                $this->license_message = __( 'Connection Error', 'timu' );
+                return false;
+            }
 
-    $api_url = add_query_arg( array(
-        'url'  => get_site_url(),
-        'item' => $this->plugin_slug,
-        'key'  => $key
-    ), 'https://thisismyurl.com/wp-json/license-manager/v1/check/' );
+            $body = json_decode( wp_remote_retrieve_body( $response ), true );
 
-    $response = wp_remote_get( $api_url, array( 'timeout' => 15 ) );
+            if ( isset( $body['status'] ) && 'active' === $body['status'] ) {
+                set_transient( $cache_key, 'active', 12 * HOUR_IN_SECONDS );
+                $this->license_message = __( 'Active', 'timu' );
+                return true;
+            }
 
-    if ( is_wp_error( $response ) ) {
-        $this->license_message = __( 'Connection Error', 'timu' );
-        return false;
-    }
+            // Capture the SPECIFIC error message from your JSON response (e.g., "not authorized for webp...")
+            if ( isset( $body['message'] ) ) {
+                $this->license_message = esc_html( $body['message'] );
+            } else {
+                $this->license_message = __( 'Invalid License', 'timu' );
+            }
 
-    $body = json_decode( wp_remote_retrieve_body( $response ), true );
-
-    if ( isset( $body['status'] ) && 'active' === $body['status'] ) {
-        set_transient( $cache_key, 'active', 12 * HOUR_IN_SECONDS );
-        $this->license_message = __( 'Active', 'timu' );
-        return true;
-    }
-
-    // Capture the specific message from your API (e.g., "This site is not authorized...")
-    $this->license_message = isset( $body['message'] ) ? esc_html( $body['message'] ) : __( 'Invalid License', 'timu' );
-    return false;
-}
+            return false;
+        }
 
         public function sanitize_core_options( $input ) {
             delete_transient( $this->plugin_slug . '_license_status' );
