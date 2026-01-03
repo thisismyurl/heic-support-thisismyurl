@@ -2,7 +2,7 @@
 /**
  * Author:              Christopher Ross
  * Author URI:          https://thisismyurl.com/?source=heic-support-thisismyurl
- * Plugin Name:         HEIC Support by thisismyurl.com
+ * Plugin Name:         HEIC Support by thisismyurl
  * Plugin URI:          https://thisismyurl.com/heic-support-thisismyurl/?source=heic-support-thisismyurl
  * Donate link:         https://thisismyurl.com/heic-support-thisismyurl/#register?source=heic-support-thisismyurl
  * 

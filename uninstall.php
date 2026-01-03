@@ -1,6 +1,6 @@
 <?php
 /**
- * HEIC Support by thisismyurl.com - Uninstaller
+ * HEIC Support by thisismyurl - Uninstaller
  * This script runs automatically when a user deletes the plugin via the WordPress dashboard.
  */
 
