@@ -2,7 +2,7 @@
 
 # HEIC Support by thisismyurl.com
 ![Version](https://img.shields.io/badge/version-1.26010222-blue.svg)
-🔗 **[Plugin Homepage](https://thisismyurl.com/heic-support-thisismyurl/#register)**
+🔗 **[Register](https://thisismyurl.com/heic-support-thisismyurl/#register)**
 
 **HEIC Support by thisismyurl.com** is the essential performance bridge for modern WordPress sites. 
 
@@ -24,16 +24,13 @@ Don't let mobile formats slow down your site. While HEIC is great for storage, i
 3. Navigate to **Tools > HEIC Support** to select your preferred conversion format.
 
 ## ❓ FAQ
-= Is this plugin free? =
+### Is this plugin free?
 Yes! The core functionality of HEIC Support is 100% free to download and use. We want to make it easy for everyone to use modern mobile photos on the web.
-
-= Why should I register for support? =
+### Why should I register for support?
 While the plugin is free, registering your copy allows you to access priority technical support and receive automatic updates directly in your dashboard. Registration helps us continue to keep the plugin compatible with the latest mobile devices and WordPress versions.
-
-= How do I register? =
+### How do I register?
 Visit [https://thisismyurl.com/heic-support-thisismyurl/#register](https://thisismyurl.com/heic-support-thisismyurl/#register) to sign up for a support license. Once you have your key, enter it into the "License Key" field in the plugin settings.
-
-= Does my server support HEIC? =
+### Does my server support HEIC?
 This plugin uses your server's ImageMagick (Imagick) library. Most modern hosts support HEIC by default, but you can verify your server status inside the plugin dashboard.
 
 ## 🗺️ Roadmap & Activity
