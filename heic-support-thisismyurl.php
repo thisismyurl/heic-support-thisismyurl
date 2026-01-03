@@ -4,12 +4,12 @@
  * Author URI:          https://thisismyurl.com/?source=heic-support-thisismyurl
  * Plugin Name:         HEIC Support by thisismyurl.com
  * Plugin URI:          https://thisismyurl.com/heic-support-thisismyurl/?source=heic-support-thisismyurl
- * Donate link:         https://thisismyurl.com/donate/?source=heic-support-thisismyurl
+ * Donate link:         https://thisismyurl.com/heic-support-thisismyurl/#register?source=heic-support-thisismyurl
  * 
  * Description:         Safely enable HEIC uploads and convert existing images to AVIF format.
  * Tags:                heic, uploads, media library, optimization
  * 
- * Version:             1.26010217
+ * Version: 1.260102
  * Requires at least:   5.3
  * Requires PHP:        7.4
  * 
@@ -25,17 +25,10 @@
  * 
  * 
  */
-
-
-/**
- * Security: Prevent direct file access to mitigate path traversal or unauthorized execution.
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
-
-
 
 /**
  * Version-aware Core Loader
@@ -94,12 +87,8 @@ class TIMU_HEIC_Support extends TIMU_Core_v1 {
 		 * Activation: Define default options to ensure an immediate working state.
 		 */
 		register_activation_hook( __FILE__, array( $this, 'activate_plugin_defaults' ) );
-
-
 		add_action( 'timu_sidebar_under_banner', array( $this, 'render_default_sidebar_actions' ) );
 	}
-
-	/**
 	 * Default Option Initialization
 	 *
 	 * Ensures the database contains baseline settings upon plugin activation 
@@ -219,14 +208,10 @@ class TIMU_HEIC_Support extends TIMU_Core_v1 {
 		 */
 		$this->init_settings_generator( $blueprint );
 	}
-
-
 	
 
 	/**
-	 * Admin Management Page Entry
-	 *
-	 * Registers the plugin settings view under the Tools (tools.php) parent menu.
+	 
 	 */
 	public function add_admin_menu() {
 		add_management_page(

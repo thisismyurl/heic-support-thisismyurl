@@ -3,410 +3,88 @@
 Contributors: thisismyurl 
 Author: thisismyurl 
 Author URI: https://thisismyurl.com/ 
-Donate link: https://thisismyurl.com/donate/ 
+Donate link: https://thisismyurl.com/heic-support-thisismyurl/#register 
 Support Link: https://thisismyurl.com/contact/ 
 Tags: heic, heif, optimization, ios images, webp, apple images 
 Requires at least: 6.0 
 Tested up to: 6.9 
-Stable tag: 1.26010217
+Stable tag: 1.260102
 License: GPLv2 or later 
 License URI: https://www.gnu.org/licenses/gpl-2.0.html 
 GitHub Plugin URI: https://github.com/thisismyurl/thisismyurl-heic-support/ 
 Primary Branch: main 
 
-A free non-destructive HEIC to WebP converter for WordPress: Auto-optimize new Apple device uploads with secure backups and 1-click restore. 
+Plugin Review
+The HEIC Support by thisismyurl.com is a critical tool for modern WordPress users, especially those capturing content on iPhones and modern mobile devices. By default, WordPress often struggles to display or even accept HEIC/HEIF files, leading to "broken" uploads for mobile-first bloggers.
+
+This plugin solves that problem through intelligent intercept logic. By hooking into the wp_handle_upload lifecycle, it allows users to keep their high-efficiency mobile workflow while ensuring the web-facing result is highly compatible and lightning-fast. The standout feature is its Multi-Codec Conversion Pipeline; it doesn't just "enable" HEIC, it offers a pathway to convert those files into industry-leading WebP or AVIF formats, ensuring maximum site speed and SEO performance.
+
+readme.txt
+Plaintext
+
+=== HEIC Support by thisismyurl.com ===
+Contributors: thisismyurl
+Author: Christopher Ross
+Author URI: https://thisismyurl.com/
+Tags: heic, heif, iphone, optimization, webp, avif, mobile-upload
+Requires at least: 5.3
+Tested up to: 6.4
+Stable tag: 1.260102
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Donate link: https://thisismyurl.com/heic-support-thisismyurl/#register
+GitHub Plugin URI: https://github.com/thisismyurl/heic-support-thisismyurl
+Primary Branch: main
+
+Bypass mobile upload errors and supercharge your site speed. Seamlessly enable HEIC/HEIF uploads from iPhones and automate conversion to next-gen WebP or AVIF formats.
 
 == Description ==
 
+**HEIC Support by thisismyurl.com** is the essential performance bridge for modern WordPress sites. 
 
-Free HEIC Optimizer by thisismyurl is a lightweight, high-performance utility designed to maximize your site speed without the need for expensive monthly subscriptions or external API keys.
+If you or your contributors upload photos directly from an iPhone or a modern Android device, you have likely encountered "File type not supported" errors or images that won't display. This plugin removes those barriers by adding native support for HEIC (High Efficiency Image Coding) and HEIF containers.
 
-Modern iOS devices capture images in HEIC/HEIF formats, which are often incompatible with web browsers. By converting these images to the modern WebP format, you can significantly reduce file sizes while maintaining high visual quality and broad compatibility.
+### Mobile-First Performance
+Don't let mobile formats slow down your site. While HEIC is great for storage, it isn't always web-friendly. Our plugin allows you to automatically "develop" these mobile photos into **WebP** or **AVIF** upon upload, reducing file sizes significantly while maintaining stunning visual clarity.
 
-This plugin is built with a Safety-First philosophy: every time an image is converted, the original HEIC file is archived in a secure backup folder. If you ever need to revert, a single click restores your original high-resolution file perfectly.
+### Key Benefits & Features:
+* **Enable HEIC Uploads:** Safely allow `.heic` and `.heif` files to be uploaded directly to your Media Library.
+* **Next-Gen Conversion:** Automatically transform mobile photos into ultra-fast WebP or AVIF formats.
+* **Boost Site Speed:** Improve your Core Web Vitals and SEO by serving optimized, modern images to your visitors.
+* **Ecosystem Aware:** Automatically detects if you have our **WebP Support** or **AVIF Support** plugins active to unlock advanced conversion paths.
+* **Precision Quality Control:** Fine-tune your compression with easy-to-use quality sliders in the Tools menu.
 
-
-= Key Features =
-
-
-100% Automatic: New HEIC and HEIF uploads are converted and optimized the moment they hit your Media Library.
-
-
-Bulk Processing: Convert your existing library using an AJAX-powered tool that prevents server timeouts.
-
-
-Non-Destructive Workflow: Original HEIC images are moved to /uploads/heic-backups/ for safe keeping.
-
-
-Live Savings Report: View a real-time dashboard showing exactly how many megabytes of server space you have saved.
-
-
-Individual & Bulk Restore: Undo changes for a single image or your entire library at any time.
-
-
-GitHub Integrated: Features a built-in updater to ensure you always have the latest security and performance patches.
 
 == Installation ==
 
-Upload the thisismyurl-heic-support folder to the /wp-content/plugins/ directory.
-
-Activate the plugin through the 'Plugins' menu in WordPress.
-
-Navigate to Media > HEIC Support to access the dashboard.
+1. Upload the `heic-support-thisismyurl` folder to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Navigate to **Tools > HEIC Support** to select your preferred conversion format.
 
 == Frequently Asked Questions ==
 
-= Does this delete my original images? = No. It moves them to a backup folder within your uploads directory to ensure you never lose your original high-resolution files.
+= Is this plugin free? =
+Yes! The core functionality of HEIC Support is 100% free to download and use. We want to make it easy for everyone to use modern mobile photos on the web.
 
+= Why should I register for support? =
+While the plugin is free, registering your copy allows you to access priority technical support and receive automatic updates directly in your dashboard. Registration helps us continue to keep the plugin compatible with the latest mobile devices and WordPress versions.
 
-= Will my images break if I delete the plugin? = We recommend using the "Restore All" button in the dashboard before uninstallation. This reverts your site back to using your original images.
+= How do I register? =
+Visit [https://thisismyurl.com/heic-support-thisismyurl/#register](https://thisismyurl.com/heic-support-thisismyurl/#register) to sign up for a support license. Once you have your key, enter it into the "License Key" field in the plugin settings.
 
-
-= Does this support HEIF formats? = Yes! The conversion engine handles both .heic and .heif files from modern smartphones.
+= Does my server support HEIC? =
+This plugin uses your server's ImageMagick (Imagick) library. Most modern hosts support HEIC by default, but you can verify your server status inside the plugin dashboard.
 
 == Changelog ==
 
-= 1.26010217 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010217 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010217 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010217 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010217 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010217 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010217 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010217 =
-* Core hierarchy updated via heic-support-thisismyurl\core\class-timu-ajax.php
-
-= 1.26010217 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010217 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010217 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010217 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010217 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010217 =
-* Core hierarchy updated via Initial Launch
-
-= 1.26010216 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010216 =
-* Core hierarchy updated via Initial Launch
-
-= 1.26010216 =
-* Core hierarchy updated via Initial Launch
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010216 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010216 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010216 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010216 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010216 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-ajax.php
-
-= 1.26010216 =
-* Core hierarchy updated via core\assets\shared-admin.js
-
-= 1.26010216 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010216 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010216 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010216 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010215 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010215 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010215 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010215 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010215 =
-* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
-
-= 1.26010215 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010215 =
-* Core hierarchy updated via heic-support-thisismyurl\core\class-timu-processor.php
-
-= 1.26010215 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010215 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010215 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010215 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010214 =
-* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
-
-= 1.26010214 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010214 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010214 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010214 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010214 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010214 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010214 =
-* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
-
-= 1.26010214 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010214 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010214 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010214 =
-* Core hierarchy updated via heic-support-thisismyurl\core\assets
-
-= 1.26010214 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010214 =
-* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
-
-= 1.26010214 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010214 =
-* Core hierarchy updated via heic-support-thisismyurl\core\desktop.ini
-
-= 1.26010214 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010214 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010214 =
-* Core hierarchy updated via Initial Launch
-
-= 1.26010214 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010214 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010214 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
-
-= 1.26010213 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010213 =
-* Core hierarchy updated via core\assets\shared-admin.js
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010213 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
-
-= 1.26010213 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
-
-= 1.26010213 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010213 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010213 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010213 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010213 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
-
-= 1.26010213 =
-* Core hierarchy updated via core\class-timu-admin.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core\2682333820516292531891922458163187249407.ico
-
-= 1.26010213 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core
-
-= 1.26010213 =
-* Core hierarchy updated via core\class-timu-core.php
-
-= 1.26010213 =
-* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-bulk.js
-
-= 1.26010213 =
-* Core hierarchy updated via core\class-timu-ajax.php
-
-= 1.26010213 =
-* Core hierarchy updated via Initial Launch
-
-= 1.26010213 =
-* Core hierarchy updated via Initial Script Launch
-
-= 1.26010212 =
-* TIMU_Core updated to version 1.26010212
-
-= 1.26010212 =
-* TIMU_Core updated to version 1.26010212
-
-= 1.26010212 =
-* TIMU_Core updated to version 1.26010212
-
-= 1.26010212 =
-* TIMU_Core updated to version 1.26010212
-n
 = 1.260102 =
-* Updated core library to version 1.260102
-n
-= 1.260102 =
-* Updated core library to version 1.260102
-
-= 1.251229 =
-
-Initial release of HEIC Support based on the WebP Support architecture.
-
-Fixed GitHub updater directory renaming logic.
-
-Implemented non-destructive backup logic for HEIC files.
-
-== Upgrade Notice ==
-
-= 1.251229 = Initial stable release with full AJAX support and 1-click restoration.
+* Core hierarchy updated via heic-support-thisismyurl\core\icons\original icons\git-commit.png
+* Core hierarchy updated via heic-support-thisismyurl\core\assets\shared-admin.css
+* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
+* Core hierarchy updated via heic-support-thisismyurl\core\icons\code-ideas.ico
+* Core hierarchy updated via core
+* Core hierarchy updated via heic-support-thisismyurl\readme.txt
+* Core hierarchy updated via Initial Launch.
+* Added support for .heic and .heif MIME types.
+* Implemented dynamic conversion paths for WebP and AVIF formats.
+* Integrated precision quality sliders for optimized output.
