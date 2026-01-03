@@ -1,4 +1,4 @@
-=== HEIC Support by thisismyurl.com === 
+﻿=== HEIC Support by thisismyurl.com === 
 
 Contributors: thisismyurl 
 Author: thisismyurl 
