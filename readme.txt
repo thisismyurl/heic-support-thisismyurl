@@ -56,6 +56,18 @@ This plugin uses your server's ImageMagick (Imagick) library. Most modern hosts 
 == Changelog ==
 
 = 1.26010222 =
+* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
+
+= 1.26010222 =
+* Core hierarchy updated via heic-support-thisismyurl\heic-support-thisismyurl.php
+
+= 1.26010222 =
+* Core hierarchy updated via heic-support-thisismyurl\readme.txt
+
+= 1.26010222 =
+* Core hierarchy updated via heic-support-thisismyurl\README.md
+
+= 1.26010222 =
 * Core hierarchy updated via heic-support-thisismyurl\readme.txt
 
 = 1.26010222 =
